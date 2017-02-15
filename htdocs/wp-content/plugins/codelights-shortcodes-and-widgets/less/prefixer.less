@@ -1,0 +1,276 @@
+// LESS Prefixes And Mixins
+// Based on Joel Sutherland's Prefixer (http://lessprefixer.com/)
+
+// Animation
+.animation(@args) {
+	-webkit-animation: @args;
+	animation: @args;
+}
+
+.animation-delay(@delay) {
+	-webkit-animation-delay: @delay;
+	animation-delay: @delay;
+}
+
+.animation-direction(@direction) {
+	-webkit-animation-direction: @direction;
+	animation-direction: @direction;
+}
+
+.animation-duration(@duration) {
+	-webkit-animation-duration: @duration;
+	animation-duration: @duration;
+}
+
+.animation-fill-mode(@mode) {
+	-webkit-animation-fill-mode: @mode;
+	animation-fill-mode: @mode;
+}
+
+.animation-iteration-count(@count) {
+	-webkit-animation-iteration-count: @count;
+	animation-iteration-count: @count;
+}
+
+.animation-name(@name) {
+	-webkit-animation-name: @name;
+	animation-name: @name;
+}
+
+.animation-play-state(@state) {
+	-webkit-animation-play-state: @state;
+	animation-play-state: @state;
+}
+
+.animation-timing-function(@function) {
+	-webkit-animation-timing-function: @function;
+	animation-timing-function: @function;
+}
+
+// Background Size
+.background-size(@args) {
+	-webkit-background-size: @args;
+	background-size: @args;
+}
+
+// Border Radius
+.border-radius(@args) {
+	-webkit-border-radius: @args;
+	border-radius: @args;
+	background-clip: padding-box;
+}
+
+// Box Shadows
+.box-shadow(@args) {
+	-webkit-box-shadow: @args;
+	box-shadow: @args;
+}
+
+.inner-shadow(@args) {
+	.box-shadow(inset @args);
+}
+
+// Columns
+
+.columns(@args) {
+	-webkit-columns: @args;
+	columns: @args;
+}
+
+.column-count(@count) {
+	-webkit-column-count: @count;
+	column-count: @count;
+}
+
+.column-gap(@gap) {
+	-webkit-column-gap: @gap;
+	column-gap: @gap;
+}
+
+.column-width(@width) {
+	-webkit-column-width: @width;
+	column-width: @width;
+}
+
+.column-rule(@args) {
+	-webkit-column-rule: @args;
+	column-rule: @args;
+}
+
+
+// Opacity
+.opacity(@factor) {
+	@iefactor: @factor*100;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{iefactor})";
+	filter: ~"alpha(opacity=(@{iefactor}))";
+	opacity: @factor;
+}
+
+// Text Shadow
+.text-shadow(@args) {
+	text-shadow: @args;
+}
+
+// Transforms
+.transform(@args) {
+	-webkit-transform: @args;
+	transform: @args;
+}
+
+.transform-origin(@args) {
+	-webkit-transform-origin: @args;
+	transform-origin: @args;
+}
+
+.transform-style(@style) {
+	-webkit-transform-style: @style;
+	transform-style: @style;
+}
+
+.backface-visibility(@args:visible) {
+	-webkit-backface-visibility: @args;
+	-moz-backface-visibility: @args;
+	backface-visibility: @args;
+}
+
+.perspective(@args) {
+	-webkit-perspective: @args;
+	-moz-perspective: @args;
+	perspective: @args;
+}
+
+.rotate(@deg:45deg) {
+	.transform(rotate(@deg));
+}
+
+.scale(@factor:.5) {
+	.transform(scale(@factor));
+}
+
+.translate(@x,@y) {
+	.transform(translate(@x,@y));
+}
+
+.translate3d(@x,@y,@z) {
+	.transform(translate3d(@x,@y,@z));
+}
+
+.translateHardware(@x,@y) {
+	.translate(@x, @y);
+	-webkit-transform: translate3d(@x,@y, 0);
+	transform: translate3d(@x,@y, 0);
+}
+
+// Transitions
+.transition(@args:200ms) {
+	-webkit-transition: @args;
+	transition: @args;
+}
+.transition-delay(@delay:0) {
+	-webkit-transition-delay: @delay;
+	transition-delay: @delay;
+}
+
+.transition-duration(@duration:200ms) {
+	-webkit-transition-duration: @duration;
+	transition-duration: @duration;
+}
+
+.transition-property(@property:all) {
+	-webkit-transition-property: @property;
+	transition-property: @property;
+}
+
+.transition-timing-function(@function:ease) {
+	-webkit-transition-timing-function: @function;
+	transition-timing-function: @function;
+}
+
+// Flexbox
+.flex-block() {
+	display: -webkit-flex;
+	display: flex;
+}
+
+.flex-inline() {
+	display: -webkit-inline-flex;
+	display: inline-flex;
+}
+
+.flex-flow(@direction: row, @wrap: nowrap) {
+	-webkit-flex-flow: @direction @wrap;
+	flex-flow: @direction @wrap;
+}
+
+.align-content(@alignment) {
+	-webkit-align-content: @alignment;
+	align-content: @alignment;
+}
+
+.flex-direction(@direction: row) {
+	-webkit-flex-direction: @direction;
+	flex-direction: @direction;
+}
+
+.flex-wrap(@wrap: nowrap) {
+	-webkit-flex-wrap: @wrap;
+	flex-wrap: @wrap;
+}
+
+.justify-content(@justification) {
+	-webkit-justify-content: @justification;
+	justify-content: @justification;
+}
+
+.align-items(@mode) {
+	-webkit-align-items: @mode;
+	align-items: @mode;
+}
+
+.flex(@args: none) {
+	-webkit-flex: @args;
+	flex: @args;
+
+}
+
+.order(@order: 0) {
+	-webkit-order: @order;
+	order: @order;
+}
+
+.flex-grow(@grow: 1) {
+	-webkit-flex-grow: @grow;
+	flex-grow: @grow;
+}
+
+.flex-shrink(@shrink: 1) {
+	-webkit-flex-shrink: @shrink;
+	flex-shrink: @shrink;
+}
+
+.flex-basis(@basis: auto) {
+	-webkit-flex-basis: @basis;
+	flex-basis: @basis;
+}
+
+.align-self(@align: auto) {
+	-webkit-align-self: @align;
+	align-self: @align;
+}
+
+.keyframes-transform (@name, @start, @finish) {
+	@-webkit-keyframes @name {
+		0% { -webkit-transform: @start; }
+		100% { -webkit-transform: @finish; }
+	}
+	@keyframes @name {
+		0% { transform: @start; }
+		100% { transform: @finish; }
+	}
+}
+
+// animation-direction: reverse doesn't work as needed and is not supported in Safari
+.keyframes-transform-inout (@name, @start, @finish) {
+	.keyframes-transform(~'@{name}_in', @start, @finish);
+	.keyframes-transform(~'@{name}_out', @finish, @start);
+}

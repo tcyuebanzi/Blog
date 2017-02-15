@@ -1,0 +1,412 @@
+@import '../../less/prefixer.less';
+
+.cl-tabs {
+	&-list {
+		font-size: 14px;
+		line-height: 19px;
+		padding: 0 15px;
+		background-color: #f5f5f5;
+		box-shadow: 0 -1px 0 #e5e5e5 inset;
+		&:before,
+		&:after {
+			content: '';
+			display: table;
+		}
+		&:after {
+			clear: both;
+		}
+	}
+	&-item {
+		float: left;
+		white-space: nowrap;
+		padding: 12px 15px;
+		cursor: pointer;
+		border-radius: 3px 3px 0 0;
+		transition: background 0.3s, color 0.3s;
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.04);
+		}
+		&.active {
+			cursor: default;
+			background-color: #fff;
+		}
+	}
+	&-sections {
+		max-height: 400px;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	&-section {
+		padding: 20px 15px 10px;
+		overflow: hidden;
+	}
+	&-section-h {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+// Elements forms
+.cl-eform {
+
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+
+	&-row {
+		width: 100%;
+		padding: 0 15px 15px;
+		box-sizing: border-box;
+		float: left;
+
+		&-title {
+			font-size: 14px;
+			font-weight: 600;
+			margin-bottom: 4px;
+		}
+		&-description {
+			font-size: 12px;
+			line-height: 16px;
+			margin-top: 3px;
+			color: #999;
+		}
+
+		// Columns
+		&.cl_col-sm-6 {
+			width: 50%;
+		}
+
+		// Row types
+		&.type_images {
+			.cl-imgattach {
+				&:before,
+				&:after {
+					content: '';
+					display: table;
+				}
+				&:after {
+					clear: both;
+				}
+				&-list {
+					margin: 0;
+					li {
+						position: relative;
+						display: block;
+						float: left;
+						overflow: hidden;
+						width: 80px;
+						height: 80px;
+						margin: 0 6px 6px 0;
+						border: 1px solid #ddd;
+						background: #fff;
+
+						.cl-imgattach-delete {
+							cursor: pointer;
+							position: absolute;
+							right: 25px;
+							top: 25px;
+							width: 30px;
+							height: 30px;
+							line-height: 30px;
+							font-size: 24px;
+							text-align: center;
+							text-decoration: none;
+							background: rgba(0, 0, 0, 0.7);
+							color: #fff;
+							opacity: 0;
+							transition: opacity 0.3s;
+						}
+						&:hover .cl-imgattach-delete {
+							opacity: 1;
+						}
+
+						img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+				&-add {
+					display: block;
+					float: left;
+					text-align: center;
+					text-decoration: none;
+					font-size: 30px;
+					line-height: 80px;
+					height: 80px;
+					width: 80px;
+					background-color: #f5f5f5;
+					border: 1px solid #ddd;
+					color: #999;
+					transition: border 0.3s, color 0.3s;
+				}
+				&-add:hover {
+					border-color: #00a0d2;
+					color: #00a0d2;
+				}
+			}
+		}
+		&.type_checkboxes {
+		}
+		&.type_color {
+			width: 50%;
+			& .wp-picker-active {
+				// Fixing wp-color-picker-alpha visual changes
+				white-space: nowrap;
+				a {
+					width: 0;
+				}
+			}
+		}
+		&.type_select {
+			select {
+				width: 100%;
+			}
+		}
+		&.type_link {
+			textarea {
+				display: none;
+			}
+			.cl-linkdialog {
+				line-height: 30px;
+
+				span {
+					margin-left: 10px;
+				}
+			}
+		}
+		&.type_textarea {
+			textarea {
+				width: 100%;
+				resize: vertical;
+			}
+		}
+		&.type_html {
+		}
+		&.type_textfield {
+			input {
+				width: 100%;
+			}
+		}
+	}
+
+	// Hiding "CodeLights" button. Need to rework architecture to allow nested editors.
+	input[id*="_content_codelights"] {
+		display: none;
+	}
+}
+
+// Admin widgets content
+.widget-content {
+	& .cl-eform {
+		margin: -1px -15px 0;
+	}
+	& .cl-tabs-list {
+		padding: 0;
+	}
+	& .cl-tabs-item {
+		border-radius: 0;
+	}
+	& .cl-tabs-sections {
+		max-height: none;
+	}
+}
+
+// Customizer widgets content
+.customize-control {
+	& .cl-eform {
+		margin: -21px -30px 0;
+	}
+}
+
+// SiteOrigin widgets content
+.so-content {
+	& .cl-eform {
+		margin: -15px -15px 0 !important;
+	}
+	& .cl-tabs-list {
+		padding: 0;
+	}
+	& .cl-tabs-item {
+		border-radius: 0;
+	}
+	& .cl-tabs-sections {
+		max-height: none;
+	}
+}
+
+// Elements list
+.cl-elist {
+	position: fixed;
+	z-index: 100002;
+	left: 0;
+	right: 0;
+	top: 10vh;
+	max-height: 90vh;
+	height: auto;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 12px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	&-h {
+	}
+	&-title {
+		line-height: 30px;
+		margin: 0 0 20px;
+	}
+	&-closer {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 30px;
+		text-align: center;
+		cursor: pointer;
+		opacity: 0.5;
+		transition: opacity 0.3s;
+	}
+	&-closer:hover {
+		opacity: 1;
+	}
+	&-list {
+		margin: 0;
+		&:before,
+		&:after {
+			content: '';
+			display: table;
+		}
+		&:after {
+			clear: both;
+		}
+	}
+	&-item {
+		float: left;
+		display: table;
+		width: 50%;
+		height: 80px;
+		margin: 0;
+		padding: 0 20px 0 62px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		background-color: #f5f5f5;
+		border: 1px solid #fff;
+		box-sizing: border-box;
+		transition: border 0.3s;
+		&-h {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		&-icon {
+			position: absolute;
+			top: 24px;
+			left: 20px;
+			height: 32px;
+			width: 32px;
+			-webkit-background-size: 32px 32px;
+			background-size: 32px 32px;
+		}
+		&-title {
+			font-size: 14px;
+			font-weight: 600;
+		}
+		&-description {
+			font-size: 12px;
+			line-height: 16px;
+			margin-top: 5px;
+			color: #999;
+		}
+	}
+	&-item:hover {
+		border-color: #00a0d2;
+	}
+}
+
+// Elements shortcode builder
+.cl-ebuilder {
+	position: fixed;
+	z-index: 100001;
+	left: 50%;
+	top: 10vh;
+	max-height: 85%;
+	overflow: auto;
+	width: 600px;
+	margin-left: -300px;
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 3px 12px rgba(0, 0, 0, 0.1);
+	&-header {
+		padding: 15px 30px;
+		background-color: #f5f5f5;
+	}
+	&-title {
+		font-size: 20px;
+		line-height: 30px;
+		color: #222;
+	}
+	&-closer {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 30px;
+		text-align: center;
+		cursor: pointer;
+		opacity: 0.5;
+		transition: opacity 0.3s;
+	}
+	&-closer:hover {
+		opacity: 1;
+	}
+	&-footer {
+		padding: 15px;
+		background-color: #f5f5f5;
+		border-top: 1px solid #e5e5e5;
+
+		& .cl-ebuilder-btn {
+			padding: 0 20px;
+			line-height: 34px;
+			height: 36px;
+			margin-right: 4px;
+		}
+	}
+}
+
+// TinyMCE Extensions
+
+// Quicktags
+#qt_content_codelights {
+	width: 30px;
+	text-indent: -10000px;
+	background: url(../../editors-support/native/icon.png) 50% 50% no-repeat;
+	background-size: 20px 20px;
+}
+
+@media (max-width: 1300px) {
+	.cl-elist {
+		width: 80%;
+	}
+}
+
+@media (max-width: 700px) {
+	.cl-ebuilder {
+		left: 20px;
+		right: 20px;
+		width: auto;
+		margin-left: 0;
+	}
+
+	.cl-eform-row {
+		width: 100% !important;
+	}
+}

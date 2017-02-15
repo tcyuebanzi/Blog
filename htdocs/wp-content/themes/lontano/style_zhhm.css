@@ -1,0 +1,131 @@
+body,div,p,video,ul,li{
+    margin: 0;
+    padding: 0;
+}
+*{
+    font-family: "微软雅黑";
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+.header{
+    width: 100%;
+    height: 55px;
+    font-size: 24px;
+    text-align: center;
+    line-height: 55px;
+}
+.promotional_video{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.nav{
+    display: flex;
+    text-align: center;
+    font-size: 28px;
+    line-height: 66px;
+    margin-bottom: 10px;
+}
+.nav .left{
+    height: 70px;
+    background: #ffda58;
+    width: 50%;
+    color: #b08b09;
+    margin: 5px;
+    border-radius: 5px;
+}
+.nav .right{
+    height: 70px;
+    background: #97dbfe;
+    width: 50%;
+    color: #439cbc;
+    margin: 5px;
+    border-radius: 5px;
+}
+.hot{
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    padding-left: 10px;
+    border-left: 3px solid slategrey;
+    margin-bottom: 8px;
+}
+.wrb ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+.wrb ul li{
+    width: 85px;
+    height: 85px;
+    list-style: none;
+    background: #f6f6f6;
+    border-radius: 10px;
+}
+.wrb ul li .pic{
+    text-align: center;
+
+}
+.wrb ul li img{
+    width: 50px;
+    height: 50px;
+}
+.wrb ul li p{
+    text-align: center;
+}
+.contact .map{
+    padding: 5px;
+}
+.contact .map img{
+    width: 100%;
+}
+.contact p{
+    padding: 0 10px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.message span{
+    margin-left: 20px;
+}
+#name{
+    height: 20px;
+    width: 80px;
+    border: 1px solid #333;
+    margin-left: 20px;
+}
+#msg{
+    height: 80px;
+    width: 90%;
+    margin: 0 5% 20px;
+    border: 1px solid #333;
+}
+.ac{
+    line-height: 30px;
+}
+#btn{
+    margin-left: 80px;
+}
+.message{
+	margin-bottom:50px;
+}
+.message ul li{
+    border: 1px solid slategrey;
+    margin: 0 10px 10px;
+    padding: 10px 10px 30px 10px;
+    position: relative;
+}
+.user_name{
+    font-weight: bold;
+}
+.content{
+    font-size: 16px;
+    color: #333;
+}
+.reply{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}

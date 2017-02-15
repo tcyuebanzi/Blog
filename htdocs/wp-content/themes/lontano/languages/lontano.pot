@@ -1,0 +1,733 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Lontano\n"
+"POT-Creation-Date: 2017-02-02 16:35+0100\n"
+"PO-Revision-Date: 2017-02-02 16:35+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:30
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: archive.php:39 index.php:44 search.php:36
+msgid "Previous"
+msgstr ""
+
+#: archive.php:40 index.php:45 search.php:37
+msgid "Next"
+msgstr ""
+
+#: archive.php:41 index.php:46 search.php:38
+#: template-parts/content-page.php:42 template-parts/content-single.php:44
+msgid "Page"
+msgstr ""
+
+#: comments.php:31
+#, php-format
+msgctxt "comments title"
+msgid "One Comment"
+msgid_plural "%1$s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:43
+msgid "Reply"
+msgstr ""
+
+#: comments.php:50
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:53
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:54
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:76
+msgid "Name *"
+msgstr ""
+
+#: comments.php:77
+msgid "Email *"
+msgstr ""
+
+#: comments.php:78
+msgid "Website *"
+msgstr ""
+
+#: comments.php:78
+msgid "Website"
+msgstr ""
+
+#: comments.php:80
+msgid " Required fields are marked "
+msgstr ""
+
+#: comments.php:84
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: comments.php:85
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: comments.php:86
+msgid "Your email address will not be published."
+msgstr ""
+
+#: comments.php:87
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:88
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: comments.php:89
+msgid "Cancel reply"
+msgstr ""
+
+#: comments.php:90
+msgid "Post Comment"
+msgstr ""
+
+#: comments.php:91
+msgid "Comment *"
+msgstr ""
+
+#: footer.php:35 header.php:118
+msgid "Facebook"
+msgstr ""
+
+#: footer.php:38 header.php:121
+msgid "Twitter"
+msgstr ""
+
+#: footer.php:41 header.php:124
+msgid "Google Plus"
+msgstr ""
+
+#: footer.php:44 header.php:127
+msgid "Linkedin"
+msgstr ""
+
+#: footer.php:47 header.php:130
+msgid "Instagram"
+msgstr ""
+
+#: footer.php:50 header.php:133
+msgid "YouTube"
+msgstr ""
+
+#: footer.php:53 header.php:136
+msgid "Pinterest"
+msgstr ""
+
+#: footer.php:56 header.php:139
+msgid "Tumblr"
+msgstr ""
+
+#: footer.php:59 header.php:142
+msgid "VK"
+msgstr ""
+
+#: footer.php:62 header.php:145
+msgid "WeChat"
+msgstr ""
+
+#: footer.php:65 header.php:148
+msgid "Weibo"
+msgstr ""
+
+#: footer.php:68 header.php:151
+msgid "Snapchat"
+msgstr ""
+
+#: footer.php:71 header.php:154
+msgid "OK.ru"
+msgstr ""
+
+#: footer.php:76
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: footer.php:76
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: footer.php:78
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#: functions.php:55
+msgid "Primary"
+msgstr ""
+
+#: functions.php:108
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:42
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:107
+msgid "Search for:"
+msgstr ""
+
+#: header.php:108
+msgid "Type here and hit enter..."
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:36 inc/admin/lontano-admin-page.php:110
+msgid "About"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:73
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:77
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:91
+msgid "Dismiss"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:92
+#, php-format
+msgid ""
+"Welcome! Thank you for choosing Lontano! To fully take advantage of the best "
+"our theme can offer please make sure you visit our %swelcome page%s."
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:94
+msgid "Get started with Lontano"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:117
+msgid "Theme Info"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:119
+msgid "View Demo"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:121
+msgid "View PRO version Demo"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:123
+msgid "Rate this theme"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:138
+msgid "Free Vs PRO"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:141
+msgid "Changelog"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:175
+msgid "Theme Customizer"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:176
+msgid "All Theme Options are available via Customize screen."
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:177
+msgid "Customize"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:181
+msgid "Got theme support question?"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:182
+msgid "Please put it in our support forum."
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:183
+msgid "Support"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:187
+msgid "Need more features?"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:188 inc/admin/lontano-admin-page.php:287
+msgid "Upgrade to PRO version for more exciting features."
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:189
+msgid "Info about PRO version"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:195 inc/admin/lontano-admin-page.php:203
+msgid "Translate"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:199
+msgid "Click below to translate this theme into your own language."
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:215
+msgid "Return to Updates"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:215
+msgid "Return to Dashboard &rarr; Updates"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:218
+msgid "Go to Dashboard &rarr; Home"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:218
+msgid "Go to Dashboard"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:235
+msgid "View changelog below:"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:292
+msgid "Features"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:293
+msgid "Lontano"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:294
+msgid "Lontano PRO"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:299
+msgid "Responsive Design"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:304
+msgid "Change Background"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:309
+msgid "Unlimited Text Color"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:314
+msgid "Flash News on top"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:319
+msgid "Logo Upload"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:324
+msgid "Choose Social Incons"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:329
+msgid "RTL Support"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:334
+msgid "Powerful theme options"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:339
+msgid "WooCommerce Style"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:344 inc/customizer.php:413
+msgid "Posts Slider"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:349
+msgid "Choose sidebar position"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:354 inc/customizer.php:416
+msgid "Footer Widgets"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:359
+msgid "Stick menu with logo"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:364 inc/customizer.php:410
+msgid "Loading Page"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:369 inc/customizer.php:409
+msgid "Font switcher"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:374 inc/customizer.php:417
+msgid "Breadcrumb"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:379 inc/customizer.php:420
+msgid "Post views counter"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:384
+msgid "8 Shortcodes"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:389
+msgid "11 Exclusive Widgets"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:394 inc/customizer.php:424
+msgid "Related Posts Box"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:399 inc/customizer.php:425
+msgid "Information About Author Box"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:407
+msgid "View PRO version demo"
+msgstr ""
+
+#: inc/admin/lontano-admin-page.php:408
+msgid "More Information"
+msgstr ""
+
+#: inc/customizer.php:31
+msgid "Box background color"
+msgstr ""
+
+#: inc/customizer.php:37
+msgid "Sidebar background color"
+msgstr ""
+
+#: inc/customizer.php:43
+msgid "Main text color"
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "Sidebar text color"
+msgstr ""
+
+#: inc/customizer.php:55
+msgid "Link and special color"
+msgstr ""
+
+#: inc/customizer.php:61
+msgid "Footer background color"
+msgstr ""
+
+#: inc/customizer.php:67
+msgid "Footer text color"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "Footer link color"
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "Lontano Theme Options"
+msgstr ""
+
+#: inc/customizer.php:119
+msgid "Show Social Buttons on Header"
+msgstr ""
+
+#: inc/customizer.php:137
+msgid "Show Social Buttons on Footer"
+msgstr ""
+
+#: inc/customizer.php:155
+msgid "Show search button"
+msgstr ""
+
+#: inc/customizer.php:173
+msgid "Show flash news"
+msgstr ""
+
+#: inc/customizer.php:191
+msgid "Flash News: number of posts to show"
+msgstr ""
+
+#: inc/customizer.php:211
+msgid "Flash News: text to show"
+msgstr ""
+
+#: inc/customizer.php:227
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/customizer.php:232
+msgid "Twitter URL"
+msgstr ""
+
+#: inc/customizer.php:237
+msgid "Google Plus URL"
+msgstr ""
+
+#: inc/customizer.php:242
+msgid "Linkedin URL"
+msgstr ""
+
+#: inc/customizer.php:247
+msgid "Instagram URL"
+msgstr ""
+
+#: inc/customizer.php:252
+msgid "YouTube URL"
+msgstr ""
+
+#: inc/customizer.php:257
+msgid "Pinterest URL"
+msgstr ""
+
+#: inc/customizer.php:262
+msgid "Tumblr URL"
+msgstr ""
+
+#: inc/customizer.php:267
+msgid "VK URL"
+msgstr ""
+
+#: inc/customizer.php:272
+msgid "WeChat URL"
+msgstr ""
+
+#: inc/customizer.php:277
+msgid "Weibo URL"
+msgstr ""
+
+#: inc/customizer.php:282
+msgid "Snapchat URL"
+msgstr ""
+
+#: inc/customizer.php:287
+msgid "OK.ru URL"
+msgstr ""
+
+#: inc/customizer.php:323
+msgid "Post show"
+msgstr ""
+
+#: inc/customizer.php:328
+msgid "Show full post"
+msgstr ""
+
+#: inc/customizer.php:329
+msgid "Show excerpt"
+msgstr ""
+
+#: inc/customizer.php:345
+msgid "Show shaded text"
+msgstr ""
+
+#: inc/customizer.php:364
+msgid "Show vertical bar"
+msgstr ""
+
+#: inc/customizer.php:382
+msgid "Add link on featured images"
+msgstr ""
+
+#: inc/customizer.php:396
+msgid "Get Lontano PRO WP Theme for only"
+msgstr ""
+
+#: inc/customizer.php:401
+msgid "Watch the demo"
+msgstr ""
+
+#: inc/customizer.php:404
+msgid "Get Lontano PRO Theme"
+msgstr ""
+
+#: inc/customizer.php:408
+msgid "Advanced Theme Options"
+msgstr ""
+
+#: inc/customizer.php:411
+msgid "Unlimited Colors and Skin"
+msgstr ""
+
+#: inc/customizer.php:412
+msgid "Manage Sidebar Position"
+msgstr ""
+
+#: inc/customizer.php:414
+msgid "Footer Slider"
+msgstr ""
+
+#: inc/customizer.php:415
+msgid "WooCommerce CSS Style"
+msgstr ""
+
+#: inc/customizer.php:418
+msgid "Stick menu"
+msgstr ""
+
+#: inc/customizer.php:419
+msgid "Sticky sidebar"
+msgstr ""
+
+#: inc/customizer.php:421
+msgid "Post formats (Audio, Video, Gallery)"
+msgstr ""
+
+#: inc/customizer.php:422
+msgid "7 Shortcodes"
+msgstr ""
+
+#: inc/customizer.php:423
+msgid "10 Exclusive Widgets"
+msgstr ""
+
+#: inc/customizer.php:426
+msgid "And much more..."
+msgstr ""
+
+#: inc/customizer.php:432
+msgid "More features? Upgrade to PRO"
+msgstr ""
+
+#: inc/pro-button/class-customize.php:77
+msgid "Lontano PRO Theme"
+msgstr ""
+
+#: inc/pro-button/class-customize.php:78
+msgid "More Info"
+msgstr ""
+
+#: inc/template-tags.php:28
+#, php-format
+msgctxt "post date"
+msgid "%s"
+msgstr ""
+
+#: inc/template-tags.php:33
+#, php-format
+msgctxt "post author"
+msgid "%s"
+msgstr ""
+
+#: inc/template-tags.php:41
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/template-tags.php:41
+msgid "1 Comment"
+msgstr ""
+
+#: inc/template-tags.php:41
+msgid "% Comments"
+msgstr ""
+
+#: inc/template-tags.php:55
+msgid " "
+msgstr ""
+
+#: inc/template-tags.php:57 inc/template-tags.php:78
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#. translators: %s: Name of current post
+#: inc/template-tags.php:64 template-parts/content-page.php:55
+#: template-parts/content.php:57
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: single.php:21
+msgid "Next Post"
+msgstr ""
+
+#: single.php:22
+msgid "Next post:"
+msgstr ""
+
+#: single.php:24
+msgid "Previous Post"
+msgstr ""
+
+#: single.php:25
+msgid "Previous post:"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:38 template-parts/content-single.php:40
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content.php:50
+msgid "Continue Reading"
+msgstr ""

@@ -1,0 +1,361 @@
+@import "prefixer.less";
+
+.cl-popup {
+
+	&.align_left {
+		text-align: left;
+	}
+	&.align_center {
+		text-align: center;
+	}
+	&.align_right {
+		text-align: right;
+	}
+
+	&-trigger img {
+		vertical-align: top;
+	}
+
+	&-overlay,
+	&-wrap {
+		display: none;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100%;
+		&.pos_absolute {
+			position: absolute;
+		}
+		&.pos_fixed {
+			position: fixed;
+		}
+	}
+
+	&-overlay {
+		z-index: 10001;
+		.transition(opacity 0.3s);
+		opacity: 0;
+		&.active {
+			opacity: 1;
+		}
+	}
+	&-wrap {
+		cursor: pointer;
+		z-index: 10002;
+		&.pos_fixed {
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+	}
+	&-closer {
+		position: fixed;
+		top: 0;
+		right: 0;
+		text-align: center;
+		font-weight: normal;
+		line-height: 76px;
+		height: 80px;
+		width: 80px;
+		cursor: pointer;
+		color: #fff;
+		.transition(opacity 0.3s);
+		opacity: 0;
+		&:before {
+			content: '\00D7';
+			font-size: 60px;
+		}
+	}
+	@media (max-width: 600px) {
+		&-closer {
+			line-height: 48px;
+			height: 50px;
+			width: 50px;
+			background-color: rgba(0,0,0,0.8);
+			&:before {
+				font-size: 40px;
+			}
+		}
+	}
+	&-box.active + .cl-popup-closer {
+		opacity: 0.33;
+	}
+	&-box.active + .cl-popup-closer:hover {
+		opacity: 1;
+	}
+	&-box {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		cursor: default;
+		
+		&-h {
+			height: 100%;
+			overflow: hidden;
+			border-radius: inherit;
+		}
+		&-closer {
+			display: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			text-align: center;
+			font-weight: normal;
+			line-height: 76px;
+			height: 80px;
+			width: 80px;
+			cursor: pointer;
+			.transition(opacity 0.3s);
+			opacity: 0.33;
+			&:before {
+				content: '\00D7';
+				font-size: 60px;
+			}
+		}
+		&-closer:hover {
+			opacity: 1;
+		}
+		&-title {
+			font-size: 1.15em;
+			line-height: 1.5;
+			font-weight: bold;
+			padding: 15px 25px;
+		}
+		&-content {
+			overflow: hidden;
+			height: 100%;
+			padding: 40px;
+			
+			& img {
+				vertical-align: top;
+			}
+			& iframe {
+				vertical-align: top;
+			}
+			& h1,
+			& h2,
+			& h3,
+			& h4,
+			& h5,
+			& h6 {
+				color: inherit;
+			}
+		}
+		&.paddings_none .cl-popup-box-content {
+			padding: 0 !important;
+		}
+		
+		// Sizes
+		
+		&.size_s {
+			width: 400px;
+			margin-left: -200px;
+			padding: 25px 0;
+		}
+		
+		&.size_m {
+			width: 600px;
+			margin-left: -300px;
+			padding: 25px 0;
+		}
+		@media (max-width: 700px) {
+			&.size_m {
+				left: 50px;
+				right: 50px;
+				width: auto;
+				margin-left: 0;
+			}
+			&.size_m + .cl-popup-closer {
+				width: 50px;
+			}
+		}
+		
+		&.size_l {
+			width: 800px;
+			margin-left: -400px;
+			padding: 25px 0;
+			
+			& .cl-popup-box-content {
+				padding: 50px;
+			}
+		}
+		@media (max-width: 900px) {
+			&.size_l {
+				left: 50px;
+				right: 50px;
+				width: auto;
+				margin-left: 0;
+			}
+			&.size_l + .cl-popup-closer {
+				width: 50px;
+			}
+		}
+		
+		&.size_xl {
+			width: 1000px;
+			margin-left: -500px;
+			padding: 25px 0;
+			
+			& .cl-popup-box-content {
+				padding: 50px;
+			}
+		}
+		@media (max-width: 1100px) {
+			&.size_xl {
+				left: 50px;
+				right: 50px;
+				width: auto;
+				margin-left: 0;
+			}
+			&.size_xl + .cl-popup-closer {
+				width: 50px;
+			}
+		}
+		
+		&.size_f {
+			left: 0;
+			right: 0;
+
+			.cl-popup-box-content {
+				min-height: 100vh;
+			}
+			
+			&.paddings_none + .cl-popup-closer {
+				background-color: rgba(0,0,0,0.8);
+			}
+		
+			@media (min-width: 601px) {
+				.cl-popup-box-title {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					padding: 25px 80px 25px 40px;
+					font-size: 20px;
+					line-height: 30px;
+				}
+				&.paddings_none .cl-popup-box-title {
+					position: static;
+				}
+				.cl-popup-box-content {
+					padding: 100px 5% 5%;
+				}
+				.cl-popup-box-title + .cl-popup-box-content {
+					padding-top: calc(~"5% + 80px");
+				}
+				&:not(.paddings_none) .cl-popup-box-closer {
+					display: block;
+				}
+				&:not(.paddings_none) + .cl-popup-closer {
+					display: none;
+				}
+			}
+		}
+		
+		@media (max-width: 600px) {
+			&.size_s,
+			&.size_m,
+			&.size_l,
+			&.size_xl {
+				left: 0;
+				right: 0;
+				width: auto;
+				padding: 0;
+				margin: 0;
+			}
+			&-title {
+				line-height: 20px;
+				padding-right: 55px;
+			}
+			&-content {
+				padding: 25px !important;
+			}
+		}
+		
+		// Animations
+		&.animation_fadeIn {
+			.cl-popup-box-h {
+				opacity: 0;
+				.transition(opacity 0.3s);
+			}
+			&.active .cl-popup-box-h {
+				opacity: 1;
+			}
+		}
+		&.animation_scaleUp {
+			.cl-popup-box-h {
+				.transform(scale(0.7));
+				opacity: 0;
+				.transition(all 0.3s);
+			}
+			&.active .cl-popup-box-h {
+				.transform(scale(1));
+				opacity: 1;
+			}
+		}
+		&.animation_scaleDown {
+			.cl-popup-box-h {
+				.transform(scale(1.5));
+				opacity: 0;
+				.transition(all 0.3s);
+			}
+			&.active .cl-popup-box-h {
+				.transform(scale(1));
+				opacity: 1;
+			}
+		}
+		&.animation_slideTop {
+			.cl-popup-box-h {
+				.transform(translateY(-20%));
+				opacity: 0;
+				.transition(all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9));
+			}
+			&.active .cl-popup-box-h {
+				.transform(translateX(0));
+				opacity: 1;
+			}
+		}
+		&.animation_slideBottom {
+			.cl-popup-box-h {
+				.transform(translateY(20%));
+				opacity: 0;
+				.transition(all 0.3s);
+			}
+			&.active .cl-popup-box-h {
+				.transform(translateY(0));
+				opacity: 1;
+			}
+		}
+		&.animation_flipHor {
+			.perspective(1300px);
+			.cl-popup-box-h {
+				.transform-style(preserve-3d);
+				.transform(rotateY(-70deg));
+				.transition(all 0.3s);
+				opacity: 0;
+			}
+			&.active .cl-popup-box-h {
+				.transform(rotateY(0deg));
+				opacity: 1;
+			}
+		}
+		&.animation_flipVer {
+			.perspective(1300px);
+			.cl-popup-box-h {
+				.transform-style(preserve-3d);
+				.transform(rotateX(-70deg));
+				.transition(all 0.3s);
+				opacity: 0;
+			}
+			&.active .cl-popup-box-h {
+				.transform(rotateX(0deg));
+				opacity: 1;
+			}
+		}
+	}
+
+}
+
+
+html.cloverlay_fixed {
+	overflow: hidden;
+}

@@ -1,0 +1,58 @@
+@import "prefixer.less";
+
+.cl-itext {
+	display: block;
+	position: relative;
+	padding: 0 !important;
+	margin: 10px 0;
+	font-size: 50px;
+	text-align: center;
+
+	&.align_left {
+		text-align: left;
+	}
+	&.align_right {
+		text-align: right;
+	}
+
+	&-part {
+		position: relative;
+		display: inline-block;
+		white-space: nowrap;
+		text-align: left;
+		-webkit-transition-property: width, color;
+		transition-property: width, color;
+
+		&.notransition {
+			// Needed for proper Safari transitions
+			-webkit-transition-property: none !important;
+			transition-property: none !important;
+		}
+
+		// Changeable parts
+		> span {
+			&.measure {
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: 0;
+			}
+
+			// Characters
+			> span {
+				display: inline-block;
+				visibility: hidden;
+				&[class^="animated_"] {
+					visibility: visible;
+				}
+				&:last-child {
+					margin-right: -200px;
+				}
+			}
+		}
+	}
+
+	&.dynamic_bold .dynamic {
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,395 @@
+# Translation of olo in Chinese (China)
+# This file is distributed under the same license as the olo package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2015-07-23 15:54:59+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/1.0-alpha-1100\n"
+"Project-Id-Version: olo\n"
+
+#: single.php:46
+msgid "Previous: %title"
+msgstr "上一篇: %title"
+
+#: single.php:47
+msgid "Next: %title"
+msgstr "下一篇: %title"
+
+#: sidebar.php:67
+msgid "Meta"
+msgstr "杂项"
+
+#: searchform.php:2
+msgid "Search..."
+msgstr "搜索..."
+
+#. #-#-#-#-#  olo.pot (olo 3.0)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: sidebar.php:60
+msgid "Archives"
+msgstr "归档"
+
+#: page.php:29
+msgid "Last Updated"
+msgstr "上次更新"
+
+#: page.php:21 single.php:26
+msgid "Pages:"
+msgstr "页面："
+
+#: inc/theme_inc.php:260
+msgid "Save Options"
+msgstr "保存选项"
+
+#: inc/theme_inc.php:264
+msgid "Reset All Settings"
+msgstr "重置所有设置"
+
+#: inc/theme_inc.php:264
+msgid "Click OK to reset. Any settings will be lost!"
+msgstr "点击‘确定’重置。所有设置将被丢失！"
+
+#: inc/theme_inc.php:147
+msgid "%1$s Theme Options"
+msgstr "%1$s 主题设置"
+
+#: inc/theme_inc.php:181
+msgid "General settings"
+msgstr "常规选项"
+
+#: inc/theme_inc.php:153
+msgid "Donation"
+msgstr "捐助"
+
+#: inc/theme_inc.php:155
+msgid "Created, Developed and maintained by %s . If you feel my work is useful and want to support the development of more free resources, you can donate me. Thank you very much!"
+msgstr "本主题由%s开发和维护，如果你觉得还不错，并想支持开发更多免费资源，你可以给我捐助。非常感谢你的支持！"
+
+#: inc/theme_inc.php:169
+msgid "http://t1.qpic.cn/mblogpic/bcd7926bbc4d4e03f384/2000"
+msgstr "http://t1.qpic.cn/mblogpic/bcd7926bbc4d4e03f384/2000"
+
+#: inc/theme_inc.php:169
+msgid "Alipay"
+msgstr "支付宝捐赠"
+
+#: inc/theme_inc.php:115
+msgid "Theme Options"
+msgstr "主题选项"
+
+#: inc/theme_inc.php:7
+msgid "Twitter URL."
+msgstr "Twitter地址"
+
+#: inc/theme_inc.php:8
+msgid "Enter your twitter url. For example: http://twitter.com/ylgod."
+msgstr "填写你的Twitter地址，例如http://twitter.com/ylgod。"
+
+#: inc/theme_inc.php:17
+msgid "Twitter Name"
+msgstr "Twitter名称"
+
+#: inc/theme_inc.php:18
+msgid "Enter your twitter name or another description."
+msgstr "填写你的 Twitter名字或者其他描述性语言。"
+
+#: inc/theme_inc.php:27
+msgid "Sina Weibo URL."
+msgstr "新浪微博地址"
+
+#: inc/theme_inc.php:28
+msgid "Enter your Sina Weibo url. For example: http://weibo.com/ylgod."
+msgstr "填写你的新浪微博地址，比如http://weibo.com/ylgod。"
+
+#: inc/theme_inc.php:37
+msgid "Sina WeiBo Name"
+msgstr "新浪微博名称"
+
+#: inc/theme_inc.php:38
+msgid "Enter your Sina Weibo name or another description."
+msgstr "填写你的新浪微博名称或者其他描述性语言。"
+
+#: inc/theme_inc.php:47
+msgid "Email URL."
+msgstr "Email邮箱地址"
+
+#: inc/theme_inc.php:48
+msgid "Enter your Email url. For example: mailto:i@hjyl.org."
+msgstr "填写你的Email地址，比如mailto:i@hjyl.org，以mailto开头。"
+
+#: inc/theme_inc.php:57
+msgid "Email Name"
+msgstr "Email邮箱名称"
+
+#: inc/theme_inc.php:58
+msgid "Enter your Email name or another description."
+msgstr "填写你的邮箱名称或其他描述性语言。"
+
+#: inc/theme_inc.php:67
+msgid "RSS URL."
+msgstr "RSS订阅地址"
+
+#: inc/theme_inc.php:68
+msgid "Enter your RSS url. For example: http://hjyl.org/feed."
+msgstr "填写你的RSS订阅地址，比如: http://hjyl.org/feed。"
+
+#: inc/theme_inc.php:77
+msgid "RSS Name"
+msgstr "RSS订阅地址"
+
+#: inc/theme_inc.php:78
+msgid "Enter your RSS name or another description."
+msgstr "填写你的RSS订阅名称或者其他描述。"
+
+#: inc/theme_inc.php:87
+msgid "Qrcode Image URL."
+msgstr "二维码地址"
+
+#: inc/theme_inc.php:88
+msgid "Enter your Qrcode Image url. For example: http://img.hjyl.org/uploads/2009/09/qrcode_for_gh_8b1a277c7cb7_430-300x300.jpg."
+msgstr "填写你的二维码地址，比如http://img.hjyl.org/uploads/2009/09/qrcode_for_gh_8b1a277c7cb7_430-300x300.jpg。"
+
+#: inc/theme_inc.php:97
+msgid "Qrcode Name"
+msgstr "二维码名称"
+
+#: inc/theme_inc.php:98
+msgid "Enter your Qrcode name or another description."
+msgstr "填写你的二维码名称或者其他描述"
+
+#: inc/oloComment.php:181
+msgid "(Edit)"
+msgstr "(编辑)"
+
+#: inc/oloComment.php:181
+msgid "%1$s at %2$s"
+msgstr "%1$s %2$s"
+
+#: inc/oloComment.php:132
+msgid "Duplicate comment detected; it looks as though you&#8217;ve already said that!"
+msgstr "检测到重复评论，您似乎已经提交过这条评论了！"
+
+#: inc/oloComment.php:141
+msgid "You are posting comments too quickly.  Slow down."
+msgstr "您提交评论的速度太快了，请稍后再发布评论。"
+
+#: inc/oloComment.php:175
+msgid "Your comment is awaiting moderation."
+msgstr "您的评论正等待审核。"
+
+#: inc/oloComment.php:118
+msgid "Error: please fill the required fields (name, email)."
+msgstr "错误：请填写必填栏目（姓名和电子邮件）。"
+
+#: inc/oloComment.php:120
+msgid "Error: please enter a valid email address."
+msgstr "错误：请输入有效的电子邮件地址。"
+
+#: inc/oloComment.php:124
+msgid "Error: please type a comment."
+msgstr "错误：请输入评论内容。"
+
+#: inc/oloComment.php:111
+msgid "Sorry, you must be logged in to post a comment."
+msgstr "抱歉，发表评论您须登录。"
+
+#: inc/oloComment.php:84
+msgid "Password Protected"
+msgstr "受密码保护"
+
+#: inc/oloComment.php:75
+msgid "Sorry, comments are closed for this item."
+msgstr "抱歉，该项目的评论已关闭。"
+
+#: functions.php:143
+msgid "Other"
+msgstr "其他"
+
+#: inc/oloComment.php:23 inc/oloComment.php:180
+msgid "%s "
+msgstr "%s"
+
+#: inc/oloComment.php:65 inc/oloComment.php:78 inc/oloComment.php:81
+msgid "Invalid comment status."
+msgstr "评论状态无效。"
+
+#: functions.php:135
+msgid "Single"
+msgstr "文章页"
+
+#: inc/oloComment.php:24
+msgid "<cite id=\"commentmeta\">%1$s</cite>"
+msgstr "<cite id=\"commentmeta\">%1$s</cite>"
+
+#: functions.php:127
+msgid "Home"
+msgstr "首页"
+
+#: functions.php:55
+msgid "Mobile Navigation"
+msgstr "手机导航"
+
+#: functions.php:76
+msgid "Before Refresh, you can"
+msgstr "刷新之前，你可以"
+
+#: functions.php:78
+msgid "Cancel Editing"
+msgstr "取消编辑"
+
+#: functions.php:79
+msgid "Wait a moment..."
+msgstr "请稍候..."
+
+#: functions.php:80
+msgid "Good Comment"
+msgstr "提交成功"
+
+#: functions.php:107
+msgid "<< Previous"
+msgstr "上一页"
+
+#: functions.php:108
+msgid "Next >>"
+msgstr "下一页"
+
+#: functions.php:119
+msgid "CopyRights"
+msgstr "转载请注明"
+
+#: functions.php:54
+msgid "Primary Navigation"
+msgstr "主导航栏"
+
+#: footer.php:4
+msgid "http://wordpress.org/"
+msgstr "http://cn.wordpress.org/"
+
+#: comments.php:72
+msgid "Pingbacks"
+msgstr "引用通告"
+
+#: footer.php:4
+msgid "CopyRight"
+msgstr "CopyRight"
+
+#: footer.php:4
+msgid "%1$s Powered by %2$s"
+msgstr "%1$s 由 %2$s 强力驱动"
+
+#. #-#-#-#-#  olo.pot (olo 3.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+#: footer.php:4 inc/theme_inc.php:155
+msgid "http://hjyl.org/"
+msgstr "http://hjyl.org/"
+
+#: comments.php:64
+msgid "Post Comment"
+msgstr "发表评论"
+
+#: comments.php:63
+msgid "Cancel reply"
+msgstr "取消回复"
+
+#: comments.php:62
+msgid "Leave a Reply to %s"
+msgstr "向%s进行回复"
+
+#: comments.php:61
+msgid "Leave a Reply"
+msgstr "发表回复"
+
+#: comments.php:56
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr "以 <a href=\"%1$s\">%2$s</a> 的身份登录。<a href=\"%3$s\" title=\"登出此帐户\">登出？</a>"
+
+#: comments.php:55
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "要发表评论，您必须先<a href=\"%s\">登录</a>。"
+
+#: comments.php:50
+msgid "Website"
+msgstr "站点"
+
+#: comments.php:49
+msgid "Email"
+msgstr "电子邮件"
+
+#: comments.php:48 comments.php:49
+msgid "(required)"
+msgstr "(必填)"
+
+#: comments.php:48
+msgid "Name"
+msgstr "姓名"
+
+#: comments.php:20
+msgid "Welcome <strong>%s</strong>"
+msgstr "欢迎回来 <strong>%s</strong>"
+
+#: comments.php:23 comments.php:27
+msgid "(Toggle)"
+msgstr "(打开)"
+
+#: comments.php:28
+msgid "(Close)"
+msgstr "(关闭)"
+
+#: comments.php:9
+msgid "Next"
+msgstr "下一"
+
+#: comments.php:9
+msgid "Previous"
+msgstr "上一个"
+
+#: comments.php:2
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "此文章受密码保护。输入密码以查看任何评论。"
+
+#: archive.php:70 index.php:73 page.php:47 single.php:58
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "抱歉，未找到与所请求的存档有关的结果。也许搜索可以帮助您找到相关文章。"
+
+#: archive.php:56 index.php:59
+msgid "Next page &raquo;"
+msgstr "下一页 &raquo;"
+
+#: archive.php:66 index.php:69 page.php:43 single.php:54
+msgid "Nothing Found"
+msgstr "没有找到任何内容"
+
+#: archive.php:56 index.php:59
+msgid "&laquo; Previous page"
+msgstr "&laquo; 上一页"
+
+#: archive.php:36 comments.php:5 index.php:39
+msgid "<b>1</b> Reply"
+msgstr "<b>1</b> 个回复"
+
+#: archive.php:36 comments.php:5 index.php:39
+msgid "<b>%</b> Replies"
+msgstr "<b>%</b> 个回复"
+
+#: archive.php:39 functions.php:77 index.php:42 page.php:32 single.php:38
+msgid "Edit"
+msgstr "编辑"
+
+#: archive.php:30 index.php:33 page.php:26 single.php:32
+msgid "Posted by"
+msgstr "作者"
+
+#: archive.php:33 index.php:36 single.php:35
+msgid "Posted in"
+msgstr "分类"
+
+#: archive.php:36 comments.php:5 index.php:39
+msgid "Leave a reply"
+msgstr "发表评论"
+
+#: archive.php:10 index.php:10 single.php:10
+msgid "Featured"
+msgstr "推荐"

@@ -1,0 +1,648 @@
+@import "prefixer.less";
+
+.cl-flipbox {
+	display: inline-block;
+	position: relative;
+
+	&-h {
+		.perspective(1000px);
+		.transform(translateZ(0));
+		.transition-property(none);
+	}
+	&-hh,
+	&-hhh {
+		position: relative;
+		.transform-style(preserve-3d);
+	}
+	&-hh,
+	&-hhh,
+	&-front,
+	&-back,
+	&-xflank,
+	&-yflank {
+		display: block;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		.backface-visibility(hidden);
+		.transition-property(transform);
+		.transition-duration(inherit);
+	}
+	&-front,
+	&-back {
+		padding: 30px;
+		text-align: center;
+		background-size: cover;
+		background-position: center center;
+		background-color: #eee;
+		border-style: solid;
+		border-width: 0;
+		&-title {
+			line-height: 1.4;
+			padding: 0 !important;
+			margin: 0 0 18px !important;
+		}
+		&-desc {
+			line-height: 1.7;
+			margin: 0 0 24px !important;
+		}
+		&-icon {
+			margin: 0 0 22px;
+		}
+		&-image {
+			margin: 0 auto 22px;
+		}
+		&-image img {
+			display: block;
+		}
+	}
+	&-front {
+		position: relative;
+		z-index: 1;
+		&-icon {
+			display: inline-block;
+			box-sizing: content-box;
+			i {
+				line-height: inherit;
+				vertical-align: top;
+			}
+			&.style_circle {
+				border-radius: 50%;
+			}
+		}
+	}
+	&-back,
+	&-xflank,
+	&-yflank {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		border-style: solid;
+	}
+
+	// Animation: Card Flip
+	&.animation_cardflip {
+
+		&.hover {
+			.cl-flipbox-front {
+				z-index: -1;
+			}
+			.cl-flipbox-back {
+				z-index: 1;
+			}
+		}
+
+		// Animation: Card Flip. Direction: North
+		&.direction_n {
+			.cl-flipbox-front {
+				.transform(rotateX(0deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateX(-180deg));
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotateX(180deg));
+				}
+				.cl-flipbox-back {
+					.transform(rotateX(0deg));
+				}
+			}
+		}
+
+		// Animation: Card Flip. Direction: North-East
+		&.direction_ne {
+			.cl-flipbox-hh {
+				.transform(rotate3d(1, 1, 0, 0deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotate3d(1, 1, 0, -180deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotate3d(1, 1, 0, 180deg));
+				}
+			}
+		}
+
+		// Animation: Card Flip. Direction: East
+		&.direction_e {
+			.cl-flipbox-front {
+				.transform(rotateY(0deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateY(-180deg));
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotateY(180deg));
+				}
+				.cl-flipbox-back {
+					.transform(rotateY(0deg));
+				}
+			}
+		}
+
+		// Animation: Card Flip. Direction: South-Eest
+		&.direction_se {
+			.cl-flipbox-hh,
+			.cl-flipbox-front {
+				.transform(rotate3d(-1, 1, 0, 0deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotate3d(-1, 1, 0, -180deg));
+			}
+			&.hover {
+				.cl-flipbox-hh,
+				.cl-flipbox-front {
+					.transform(rotate3d(-1, 1, 0, 90deg));
+				}
+				.cl-flipbox-back {
+					.transform(rotate3d(-1, 1, 0, -90deg));
+				}
+			}
+		}
+
+		// Animation: Card Flip. Direction: South
+		&.direction_s {
+			.cl-flipbox-front {
+				.transform(rotateX(0deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateX(180deg));
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotateX(-180deg));
+				}
+				.cl-flipbox-back {
+					.transform(rotateX(0deg));
+				}
+			}
+		}
+
+		// Animation: Card Flip. Direction: South-West
+		&.direction_sw {
+			.cl-flipbox-hh,
+			.cl-flipbox-front {
+				.transform(rotate3d(1, 1, 0, 0deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotate3d(1, 1, 0, 180deg));
+			}
+			&.hover {
+				.cl-flipbox-hh,
+				.cl-flipbox-front {
+					.transform(rotate3d(1, 1, 0, -90deg));
+				}
+				.cl-flipbox-back {
+					.transform(rotate3d(1, 1, 0, 90deg));
+				}
+			}
+		}
+
+		// Animation: Card Flip. Direction: West
+		&.direction_w {
+			.cl-flipbox-front {
+				.transform(rotateY(0deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateY(180deg));
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotateY(-180deg));
+				}
+				.cl-flipbox-back {
+					.transform(rotateY(0deg));
+				}
+			}
+		}
+
+		// Animation: Card Flip. Direction: North-West
+		&.direction_nw {
+			.cl-flipbox-hh,
+			.cl-flipbox-front {
+				.transform(rotate3d(-1, 1, 0, 0deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotate3d(-1, 1, 0, 180deg));
+			}
+			&.hover {
+				.cl-flipbox-hh,
+				.cl-flipbox-front {
+					.transform(rotate3d(-1, 1, 0, -90deg));
+				}
+				.cl-flipbox-back {
+					.transform(rotate3d(-1, 1, 0, 90deg));
+				}
+			}
+		}
+
+	}
+
+	// Animation: Cube Tilt
+	&.animation_cubetilt {
+
+		&.hover {
+			.cl-flipbox-front {
+				z-index: -1;
+			}
+			.cl-flipbox-back {
+				z-index: 1;
+			}
+		}
+
+		// Animation: Cube Tilt. Direction: North
+		&.direction_n {
+			.cl-flipbox-hh {
+				.transform(rotateX(90deg) translateY(-50%) rotateX(-90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateX(90deg) translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(translateY(50%) rotateX(-90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateX(90deg) translateY(-50%));
+				}
+			}
+		}
+
+		// Animation: Cube Tilt. Direction: East
+		&.direction_e {
+			.cl-flipbox-hh {
+				.transform(rotateY(90deg) translateX(50%) rotateY(-90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateY(90deg) translateX(-50%) rotateY(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(translateX(-50%) rotateY(-90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateY(90deg) translateX(50%));
+				}
+			}
+		}
+
+		// Animation: Cube Tilt. Direction: South
+		&.direction_s {
+			.cl-flipbox-hh {
+				.transform(rotateX(-90deg) translateY(50%) rotateX(90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateX(90deg) translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(translateY(-50%) rotateX(90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateX(-90deg) translateY(50%));
+				}
+			}
+		}
+
+		// Animation: Cube Tilt. Direction: West
+		&.direction_w {
+			.cl-flipbox-hh {
+				.transform(rotateY(-90deg) translateX(-50%) rotateY(90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateY(90deg) translateX(-50%) rotateY(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(translateX(50%) rotateY(90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateY(-90deg) translateX(-50%));
+				}
+			}
+		}
+	}
+
+	// Animation: Cube Flip
+	&.animation_cubeflip {
+
+		&.hover {
+			.cl-flipbox-front {
+				z-index: -1;
+			}
+			.cl-flipbox-back {
+				z-index: 1;
+			}
+		}
+
+		// Animation: Cube Flip. Direction: North
+		&.direction_n {
+			.cl-flipbox-hh {
+				.transform(rotateX(90deg) translateY(-50%) rotateX(-90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateX(90deg) translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateX(-90deg) translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-xflank {
+				.transform(translateY(50%) rotateX(-90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateX(90deg) translateY(-50%) rotateX(90deg));
+				}
+			}
+		}
+
+		// Animation: Cube Flip. Direction: North-East
+		&.direction_ne {
+			.cl-flipbox-hh {
+				.transform(rotateX(90deg) translateY(-50%) rotateX(-90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateX(90deg) translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateX(-90deg) translateY(50%) rotateX(-90deg) rotateZ(-90deg));
+			}
+			.cl-flipbox-xflank {
+				.transform(translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-yflank {
+				.transform(translateX(-50%) rotateY(-90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateX(90deg) translateY(-50%) rotateX(-90deg) rotate3d(1, 1, 0, 90deg));
+				}
+				.cl-flipbox-hhh {
+					.transform(rotate3d(1, 1, 0, 90deg));
+				}
+			}
+		}
+
+		// Animation: Cube Flip. Direction: East
+		&.direction_e {
+			.cl-flipbox-hh {
+				.transform(rotateY(90deg) translateX(50%) rotateY(-90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateY(90deg) translateX(-50%) rotateY(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateY(90deg) translateX(50%) rotateY(90deg));
+			}
+			.cl-flipbox-yflank {
+				.transform(translateX(-50%) rotateY(-90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateY(90deg) translateX(50%) rotateY(90deg));
+				}
+			}
+		}
+
+		// Animation: Cube Flip. Direction: South-East
+		&.direction_se {
+			.cl-flipbox-hh {
+				.transform(rotateX(90deg) translateY(-50%) rotateX(-90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateX(90deg) translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateX(-90deg) translateY(50%) rotateX(-90deg) rotateZ(90deg));
+			}
+			.cl-flipbox-xflank {
+				.transform(translateY(-50%) rotateX(90deg));
+			}
+			.cl-flipbox-yflank {
+				.transform(translateX(-50%) rotateY(-90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateX(90deg) translateY(-50%) rotateX(-90deg) rotate3d(-1, 1, 0, 90deg));
+				}
+				.cl-flipbox-hhh {
+					.transform(rotate3d(-1, 1, 0, 90deg));
+				}
+			}
+		}
+
+		// Animation: Cube Flip. Direction: South
+		&.direction_s {
+			.cl-flipbox-hh {
+				.transform(rotateX(-90deg) translateY(50%) rotateX(90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateX(90deg) translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateX(-90deg) translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-xflank {
+				.transform(translateY(-50%) rotateX(90deg));
+			}
+			.cl-flipbox-yflank {
+				.transform(translateX(-50%) rotateY(-90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateX(-90deg) translateY(50%) rotateX(-90deg));
+				}
+			}
+		}
+
+		// Animation: Cube Flip. Direction: South-West
+		&.direction_sw {
+			.cl-flipbox-hh {
+				.transform(rotateX(90deg) translateY(-50%) rotateX(-90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateX(90deg) translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateX(-90deg) translateY(50%) rotateX(-90deg) rotateZ(-90deg));
+			}
+			.cl-flipbox-xflank {
+				.transform(translateY(-50%) rotateX(90deg));
+			}
+			.cl-flipbox-yflank {
+				.transform(translateX(50%) rotateY(90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateX(90deg) translateY(-50%) rotateX(-90deg) rotate3d(-1, -1, 0, 90deg));
+				}
+				.cl-flipbox-hhh {
+					.transform(rotate3d(-1, -1, 0, 90deg));
+				}
+			}
+		}
+
+		// Animation: Cube Flip. Direction: West
+		&.direction_w {
+			.cl-flipbox-hh {
+				.transform(rotateY(-90deg) translateX(-50%) rotateY(90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateY(90deg) translateX(-50%) rotateY(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateY(90deg) translateX(50%) rotateY(90deg));
+			}
+			.cl-flipbox-yflank {
+				.transform(translateX(50%) rotateY(90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateY(-90deg) translateX(-50%) rotateY(-90deg));
+				}
+			}
+		}
+
+		// Animation: Cube Flip. Direction: North-West
+		&.direction_nw {
+			.cl-flipbox-hh {
+				.transform(rotateX(90deg) translateY(-50%) rotateX(-90deg));
+			}
+			.cl-flipbox-front {
+				.transform(rotateX(90deg) translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-back {
+				.transform(rotateX(-90deg) translateY(50%) rotateX(-90deg) rotateZ(90deg));
+			}
+			.cl-flipbox-xflank {
+				.transform(translateY(50%) rotateX(-90deg));
+			}
+			.cl-flipbox-yflank {
+				.transform(translateX(50%) rotateY(90deg));
+			}
+			&.hover {
+				.cl-flipbox-hh {
+					.transform(rotateX(90deg) translateY(-50%) rotateX(-90deg) rotate3d(1, -1, 0, 90deg));
+				}
+				.cl-flipbox-hhh {
+					.transform(rotate3d(1, -1, 0, 90deg));
+				}
+			}
+		}
+	}
+
+	// Animation: Cover Open
+	&.animation_coveropen {
+
+		// Animation: Cover Open. Direction: North
+		&.direction_n {
+			.cl-flipbox-front {
+				.transform-origin(50% 0%);
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotateX(90deg));
+				}
+			}
+		}
+
+		// Animation: Cover Open. Direction: North-East
+		&.direction_ne {
+			.cl-flipbox-front {
+				// webkit glitch fix
+				-webkit-transform: rotate3d(1, 1, 0, 1deg);
+				.transform-origin(100% 0%);
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotate3d(1, 1, 0, 90deg));
+				}
+			}
+		}
+
+		// Animation: Cover Open. Direction: East
+		&.direction_e {
+			.cl-flipbox-front {
+				// webkit glitch fix
+				-webkit-transform: rotateY(1deg);
+				.transform-origin(100% 50%);
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotateY(90deg));
+				}
+			}
+		}
+
+		// Animation: Cover Open. Direction: South-East
+		&.direction_se {
+			.cl-flipbox-front {
+				// webkit glitch fix
+				-webkit-transform: rotate3d(-1, 1, 0, 1deg);
+				.transform-origin(100% 100%);
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotate3d(-1, 1, 0, 90deg));
+				}
+			}
+		}
+
+		// Animation: Cover Open. Direction: South
+		&.direction_s {
+			.cl-flipbox-front {
+				// webkit glitch fix
+				-webkit-transform: rotateX(-1deg);
+				.transform-origin(50% 100%);
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotateX(-90deg));
+				}
+			}
+		}
+
+		// Animation: Cover Open. Direction: South-West
+		&.direction_sw {
+			.cl-flipbox-front {
+				// webkit glitch fix
+				-webkit-transform: rotate3d(-1, -1, 0, 1deg);
+				.transform-origin(0% 100%);
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotate3d(-1, -1, 0, 90deg));
+				}
+			}
+		}
+
+		// Animation: Cover Open. Direction: West
+		&.direction_w {
+			.cl-flipbox-front {
+				.transform-origin(0% 50%);
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotateY(-90deg));
+				}
+			}
+		}
+
+		// Animation: Cover Open. Direction: North-West
+		&.direction_nw {
+			.cl-flipbox-front {
+				.transform-origin(0% 0%);
+			}
+			&.hover {
+				.cl-flipbox-front {
+					.transform(rotate3d(1, -1, 0, 90deg));
+				}
+			}
+		}
+
+	}
+}
